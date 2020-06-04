@@ -7,7 +7,10 @@
 * [about](https://www.jhipster.tech/)
 * [Options in jdl](https://www.jhipster.tech/jdl/applications#options-in-applications)
 
-clientFramework react
+### big picture
+
+![kubernetes istio](istio.png)
+
 
 ### build
 
