@@ -1,0 +1,93 @@
+commonLabels:
+  app.kubernetes.io/genereted-by: JHipster
+
+namespace: office
+
+resources:
+  - namespace.yml
+  # Individual apps
+  - ui-k8s/ui-deployment.yml
+  - ui-k8s/ui-service.yml
+  - ui-k8s/ui-mongodb.yml
+  - ui-k8s/ui-gateway.yml
+  - ui-k8s/jwt-secret.yml
+  - ui-k8s/ui-destination-rule.yml
+  - ui-k8s/ui-virtual-service.yml
+  - organization-k8s/organization-deployment.yml
+  - organization-k8s/organization-service.yml
+  - organization-k8s/organization-mysql.yml
+  - organization-k8s/jwt-secret.yml
+  - organization-k8s/organization-destination-rule.yml
+  - organization-k8s/organization-virtual-service.yml
+  - leave-k8s/leave-deployment.yml
+  - leave-k8s/leave-service.yml
+  - leave-k8s/leave-mongodb.yml
+  - leave-k8s/jwt-secret.yml
+  - leave-k8s/leave-destination-rule.yml
+  - leave-k8s/leave-virtual-service.yml
+  - meeting-k8s/meeting-deployment.yml
+  - meeting-k8s/meeting-service.yml
+  - meeting-k8s/meeting-mongodb.yml
+  - meeting-k8s/jwt-secret.yml
+  - meeting-k8s/meeting-destination-rule.yml
+  - meeting-k8s/meeting-virtual-service.yml
+  - notification-k8s/notification-deployment.yml
+  - notification-k8s/notification-service.yml
+  - notification-k8s/notification-mongodb.yml
+  - notification-k8s/jwt-secret.yml
+  - notification-k8s/notification-destination-rule.yml
+  - notification-k8s/notification-virtual-service.yml
+  # service discovery eureka/consul
+  # istio
+  - istio-k8s/grafana-gateway.yml
+  - istio-k8s/zipkin-gateway.yml
+  - istio-k8s/kiali-gateway.yml
+
+patchesJson6902:
+  - target:
+      version: v1
+      kind: Namespace
+      name: office
+    path: patch-k8s/istio-label.yml
+  - target:
+      group: networking.istio.io
+      version: v1alpha3
+      kind: Gateway
+      name: grafana-observability-gateway
+      namespace: office
+    path: patch-k8s/istio-namespace.yml
+  - target:
+      group: networking.istio.io
+      version: v1alpha3
+      name: grafana-gw-virtualservice
+      kind: VirtualService
+      namespace: office
+    path: patch-k8s/istio-namespace.yml
+  - target:
+      group: networking.istio.io
+      version: v1alpha3
+      kind: Gateway
+      name: kiali-observability-gateway
+      namespace: office
+    path: patch-k8s/istio-namespace.yml
+  - target:
+      group: networking.istio.io
+      version: v1alpha3
+      name: kiali-gw-virtualservice
+      kind: VirtualService
+      namespace: office
+    path: patch-k8s/istio-namespace.yml
+  - target:
+      group: networking.istio.io
+      version: v1alpha3
+      kind: Gateway
+      name: zipkin-observability-gateway
+      namespace: office
+    path: patch-k8s/istio-namespace.yml
+  - target:
+      group: networking.istio.io
+      version: v1alpha3
+      name: zipkin-gw-virtualservice
+      kind: VirtualService
+      namespace: office
+    path: patch-k8s/istio-namespace.yml

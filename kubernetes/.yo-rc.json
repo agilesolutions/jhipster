@@ -1,0 +1,19 @@
+{
+  "generator-jhipster": {
+    "deploymentType": "kubernetes",
+    "gatewayType": "zuul",
+    "monitoring": "no",
+    "directoryPath": "../",
+    "appsFolders": ["ui", "organization", "leave", "meeting", "notification"],
+    "clusteredDbApps": [],
+    "consoleOptions": [],
+    "serviceDiscoveryType": false,
+    "dockerRepositoryName": "razvansimiontrencadis",
+    "dockerPushCommand": "docker push",
+    "kubernetesNamespace": "office",
+    "kubernetesServiceType": "Ingress",
+    "ingressDomain": "35.184.190.237.nip.io",
+    "istio": true,
+    "jwtSecretKey": "N2ViMDIxMzE1YzIyODI2ZDYxYzdkMGYzM2NiMmMzMmNiZjhlODE5MDc5OGZiNDU2Yjk4OTUyZjcwYjhlNjBlOGY2MmI0YmE5YjI1MjY1NGRlOTNjZTAyOWI5YThjMGU5MjA2ZA=="
+  }
+}

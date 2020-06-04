@@ -1,0 +1,24 @@
+apiVersion: skaffold/v1
+kind: Config
+build:
+  artifacts:
+    - image: razvansimiontrencadis/ui
+      context: ../ui
+      jib: {}
+    - image: razvansimiontrencadis/organization
+      context: ../organization
+      jib: {}
+    - image: razvansimiontrencadis/leave
+      context: ../leave
+      jib: {}
+    - image: razvansimiontrencadis/meeting
+      context: ../meeting
+      jib: {}
+    - image: razvansimiontrencadis/notification
+      context: ../notification
+      jib: {}
+  tagPolicy:
+    envTemplate:
+      template: '{{.IMAGE_NAME}}:latest'
+deploy:
+  kustomize: {}
