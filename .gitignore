@@ -1,0 +1,27 @@
+**/node_modules/
+**/*.log
+
+# Eclipse
+.metadata/**
+.classpath
+.project
+.settings/
+**/.settings
+**/.classpath
+**/.project
+
+# Intellij
+.idea/
+**/.idea/**
+/.idea
+*.iml
+**/*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
+**/target/
