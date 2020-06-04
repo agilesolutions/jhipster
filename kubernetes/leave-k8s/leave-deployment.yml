@@ -46,7 +46,7 @@ spec:
               done
       containers:
         - name: leave-app
-          image: razvansimiontrencadis/leave
+          image: agilesolutions/leave
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: prod

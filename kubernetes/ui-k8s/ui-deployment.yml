@@ -46,7 +46,7 @@ spec:
               done
       containers:
         - name: ui-app
-          image: razvansimiontrencadis/ui
+          image: agilesolutions/ui
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: prod

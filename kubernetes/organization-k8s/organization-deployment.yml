@@ -46,7 +46,7 @@ spec:
               done
       containers:
         - name: organization-app
-          image: razvansimiontrencadis/organization
+          image: agilesolutions/organization
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: prod

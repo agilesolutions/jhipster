@@ -2,19 +2,19 @@ apiVersion: skaffold/v1
 kind: Config
 build:
   artifacts:
-    - image: razvansimiontrencadis/ui
+    - image: agilesolutions/ui
       context: ../ui
       jib: {}
-    - image: razvansimiontrencadis/organization
+    - image: agilesolutions/organization
       context: ../organization
       jib: {}
-    - image: razvansimiontrencadis/leave
+    - image: agilesolutions/leave
       context: ../leave
       jib: {}
-    - image: razvansimiontrencadis/meeting
+    - image: agilesolutions/meeting
       context: ../meeting
       jib: {}
-    - image: razvansimiontrencadis/notification
+    - image: agilesolutions/notification
       context: ../notification
       jib: {}
   tagPolicy:
