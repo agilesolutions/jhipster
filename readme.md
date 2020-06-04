@@ -16,4 +16,4 @@
 
 * npm install generator-jhipster -g
 * jhipster --version
-* jhipster import jdl app.jdl
+* jhipster import-jdl app.jdl

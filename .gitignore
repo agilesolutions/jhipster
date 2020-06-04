@@ -25,3 +25,4 @@
 log/
 target/
 **/target/
+/.metadata/
